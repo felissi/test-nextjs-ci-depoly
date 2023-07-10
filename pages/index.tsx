@@ -1,4 +1,4 @@
-
+import HeroApple from "@/components/HeroApple/HeroApple"
 export default function Page() {
-    return <h1 className="text-red-100">Hello, Next.js!</h1>
+    return <HeroApple />
 }
