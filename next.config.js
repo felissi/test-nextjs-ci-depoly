@@ -18,6 +18,7 @@ const nextConfig = {
   // Optionally, add any other Next.js config below
   reactStrictMode: true,
   output: "export",
+  assetPrefix: "/test-nextjs-ci-depoly",
 };
 
 // Merge MDX config with Next.js config
