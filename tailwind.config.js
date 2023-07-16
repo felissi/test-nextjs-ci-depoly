@@ -6,7 +6,12 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      // data: {
+      //   light: 'theme="light"',
+      //   dark: 'theme="dark"',
+      // },
+    },
   },
   daisyui: {
     themes: [
@@ -19,7 +24,27 @@ module.exports = {
           "base-100": "#F1F5F9",
         },
       },
+      {
+        dark: {
+          "base-100": "#000000",
+        },
+      },
     ],
   },
-  plugins: [require("daisyui")],
+  plugins: [
+    require("daisyui"),
+    function ({ addVariant }) {
+      addVariant("theme-light", [
+        '[data-theme="light"] &',
+        '[data-theme="light"]&',
+        "@media (prefers-color-scheme: light)",
+      ]);
+      addVariant("theme-dark", [
+        '[data-theme="dark"] &',
+        '[data-theme="dark"]&',
+        "@media (prefers-color-scheme: dark)",
+      ]);
+      // addVariant("child-hover", "& > *:hover");
+    },
+  ],
 };

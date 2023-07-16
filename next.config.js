@@ -1,5 +1,5 @@
 const withMDX = require("@next/mdx")({
-  extension: /\.mdx?$/,
+  extension: /\.(md|mdx)?$/,
   options: {
     // If you use remark-gfm, you'll need to use next.config.mjs
     // as the package is ESM only
@@ -18,7 +18,10 @@ const nextConfig = {
   // Optionally, add any other Next.js config below
   reactStrictMode: true,
   output: "export",
-  assetPrefix: "/test-nextjs-ci-depoly",
+  // assetPrefix: "/test-nextjs-ci-depoly",
+  experimental: {
+    appDir: true,
+  },
 };
 
 // Merge MDX config with Next.js config
