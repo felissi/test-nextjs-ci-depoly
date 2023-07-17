@@ -11,22 +11,31 @@ module.exports = {
       //   light: 'theme="light"',
       //   dark: 'theme="dark"',
       // },
+      zIndex: {
+        60: "60",
+      },
     },
   },
   daisyui: {
     themes: [
       {
         light: {
-          primary: "#a991f7",
-          secondary: "#f6d860",
-          accent: "#37cdbe",
+          primary: "#334155",
+          secondary: "#64748b",
+          accent: "#877CC6",
           neutral: "#3d4451",
           "base-100": "#F1F5F9",
+          "base-content": "#334155",
         },
       },
       {
         dark: {
-          "base-100": "#000000",
+          primary: "#E2E8F0",
+          secondary: "#CBD5E1",
+          accent: "#877CC6",
+          // neutral: "#3d4451",
+          "base-100": "#0E0E10",
+          "base-content": "#E2E8F0",
         },
       },
     ],

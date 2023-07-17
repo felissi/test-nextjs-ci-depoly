@@ -1,25 +1,16 @@
 
 export default function HeroApple() {
-    return <div className="min-h-[2000px]">Hello, Next.js!
-        <label className="btn btn-circle swap swap-rotate">
+    return (
+        <div className="min-h-screen flex items-center content-center">
+            <div className=" grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 px-5 w-full  gap-x-5 items-center content-center ">
 
-            {/* this hidden checkbox controls the state */}
-            <input type="checkbox" />
-
-            {/* hamburger icon */}
-            <svg className="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" /></svg>
-
-            {/* close icon */}
-            <svg className="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" /></svg>
-
-        </label>
-        <label className="swap swap-flip text-9xl">
-  
-  {/* this hidden checkbox controls the state */}
-  <input type="checkbox" />
-  
-  <div className="swap-on">😈</div>
-  <div className="swap-off">😇</div>
-</label>
-    </div>
+                <div className="col-start-2 col-end-6 row-start-2 w-[270px] h-[270px] theme-light:shadow-[0px_0px_250px_4px_#2B496E,inset_0_0_090px_1px_#334155]  theme-dark:shadow-[0px_0px_250px_4px_#2B496E] rounded-full " ></div>
+                <h1 className="col-start-5 col-end-8 row-start-2 text-[72px]">Welcome, friend</h1>
+                <section className="col-start-9 col-end-12 row-start-2">
+                    <h2 className="text-[24px]">About Me</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Est placerat in egestas erat imperdiet sed. Aliquam ultrices sagittis orci a scelerisque purus semper. Porttitor lacus luctus accumsan tortor.</p>
+                </section>
+            </div>
+        </div>
+    )
 }
