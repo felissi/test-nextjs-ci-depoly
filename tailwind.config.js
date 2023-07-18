@@ -93,12 +93,10 @@ module.exports = {
       addVariant("theme-light", [
         '[data-theme="light"] &',
         '[data-theme="light"]&',
-        "@media (prefers-color-scheme: light)",
       ]);
       addVariant("theme-dark", [
         '[data-theme="dark"] &',
         '[data-theme="dark"]&',
-        "@media (prefers-color-scheme: dark)",
       ]);
       // addVariant("child-hover", "& > *:hover");
     },
