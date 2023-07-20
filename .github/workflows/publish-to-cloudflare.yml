@@ -94,7 +94,7 @@ jobs:
       - name: Take a look at the directory
         run: ls
       - name: Unzip artifact
-        run: tar -xvf artifact.tar
+        run: tar -xvf artifact.tar -c ./out
       - name: Check Cloudflare login ⛅
         run: npx wrangler whoami
       - name: Deploy to Cloudflare Pages 🚀
