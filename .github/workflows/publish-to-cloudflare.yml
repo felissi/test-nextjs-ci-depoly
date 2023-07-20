@@ -84,9 +84,9 @@ jobs:
     needs: build
     steps:
       - name: set environment variable - CF_ACCOUNT_ID 🚀
-        run: set CF_ACCOUNT_ID=${{secrets.CF_ACCOUNT_ID}}
+        run: export CF_ACCOUNT_ID=${{secrets.CF_ACCOUNT_ID}}
       - name: set environment variable - CLOUDFLARE_API_TOKEN 🚀
-        run: set CLOUDFLARE_API_TOKEN=${{secrets.CLOUDFLARE_API_TOKEN}}
+        run: export CLOUDFLARE_API_TOKEN=${{secrets.CLOUDFLARE_API_TOKEN}}
       - name: check Cloudflare login 🚀
         run: npx wrangler whoami
       - name: Deploy to Cloudflare Pages 🚀
