@@ -98,4 +98,4 @@ jobs:
         run: npx wrangler whoami
       - name: Deploy to Cloudflare Pages 🚀
         id: deployment
-        run: echo "page_url=$(npx wrangler pages deploy --project-name ${{vars.CLOUDFLARE_PROJECT_NAME}} ./out | grep -oP 'https:\/\/[a-zA-Z0-9]+\.[a-zA-Z0-9]+\.[a-zA-Z0-9]+\/')" >> $GITHUB_OUTPUT
+        run: npx wrangler pages deploy --project-name ${{vars.CLOUDFLARE_PROJECT_NAME}} ./out && echo "page_url=$(!!)" >> "$GITHUB_OUTPUT"
