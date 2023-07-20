@@ -76,7 +76,9 @@ jobs:
       - name: Upload artifact ⛱️
         uses: actions/upload-pages-artifact@v1
         with:
+          name: build
           path: ./out
+          retention-days: 30
 
   # Deployment job
   deploy:
@@ -86,7 +88,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: check Cloudflare login ⛅
+      - name: Download build artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+      - name: Check Cloudflare login ⛅
         run: npx wrangler whoami
       - name: Deploy to Cloudflare Pages 🚀
         run: npx wrangler pages deploy --project-name ${{env.CLOUDFLARE_PROJECT_NAME}} ./out
