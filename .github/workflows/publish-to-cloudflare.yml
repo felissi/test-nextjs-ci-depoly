@@ -89,4 +89,4 @@ jobs:
       - name: check Cloudflare login ⛅
         run: npx wrangler whoami
       - name: Deploy to Cloudflare Pages 🚀
-        run: npx wrangler pages deploy --project-name ${{CLOUDFLARE_PROJECT_NAME}} ./out
+        run: npx wrangler pages deploy --project-name ${{env.CLOUDFLARE_PROJECT_NAME}} ./out
