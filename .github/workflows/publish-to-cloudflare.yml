@@ -96,6 +96,8 @@ jobs:
         run: ls
       - name: Unzip artifact 🤐
         run: tar -xvf ./out/artifact.tar -C ./out && rm ./out/artifact.tar
+      - name: Install Wrangler for cloudflare deployment
+        run: npm i -g wrangler
       - name: Check Cloudflare login ⛅
         run: npx wrangler whoami
       - name: Deploy to Cloudflare Pages 🚀
